@@ -2,28 +2,28 @@ import { StyleSheet, Text, View } from "react-native";
 
 import List from "@/components/List";
 import { Link } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View>
       <View style={styles.titleContainer}>
-        <Text style={styles.titleText}>Initial Page!</Text>
-        <Link href={`/nested/${Date.now()}`}>
-          <Text style={styles.link}>Go to nested</Text>
+        <Text style={styles.titleText}>Nested Page!</Text>
+        <Link href={`/regular/${Date.now()}`}>
+          <Text style={styles.link}>Go to regular</Text>
         </Link>
       </View>
       <List />
-    </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   titleContainer: {
     padding: 16,
+    height: 128,
     backgroundColor: "blue",
-    flexDirection: "row",
     justifyContent: "space-between",
+    flexDirection: "row",
     alignItems: "center",
     gap: 8,
   },

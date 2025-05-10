@@ -8,7 +8,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text style={styles.titleText}>Initial Page!</Text>
+        <Text style={styles.titleText}>Regular!</Text>
         <Link href={`/nested/${Date.now()}`}>
           <Text style={styles.link}>Go to nested</Text>
         </Link>
